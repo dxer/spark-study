@@ -7,7 +7,7 @@ case class Person(name: String, age: Int)
 
 object SparkDemo {
   def main(args: Array[String]): Unit = {
-    val spark = SparkSession.builder().appName("s").master("local").getOrCreate()
+    val spark = SparkSession.builder().appName("SparkDemo").master("local").getOrCreate()
 
     val rdd = spark.sparkContext
       .parallelize(Array(("zhangsan", 15), ("lisi", 14), ("wangwu", 15)))
